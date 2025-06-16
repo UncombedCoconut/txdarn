@@ -218,7 +218,7 @@ class SockJSProtocolMachine(object):
     connected.upon(receive,
                    enter=connected,
                    outputs=[_received],
-                   collector=next)
+                   collector=lambda x: next(iter(x)))
 
     connected.upon(heartbeat,
                    enter=connected,
