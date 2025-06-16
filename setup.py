@@ -5,7 +5,7 @@ Setup file for txdarn -- SockJS for Twisted.
 from setuptools import setup, find_packages
 
 setup(name='txdarn',
-      version='17.0.0',
+      version='17.0.1',
       description="""
       SockJS for modern Twisted.
       """,
