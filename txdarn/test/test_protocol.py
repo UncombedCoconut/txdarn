@@ -1,6 +1,7 @@
 import io
 import json
 
+import automat
 import autobahn.websocket.types as A
 
 from twisted.trial import unittest
@@ -362,7 +363,7 @@ class SockJSProtocolMachineTestCase(unittest.TestCase):
         self.sockJSMachine.disconnect()
         self.assertTrue(self.protocolRecorder.empty())
 
-        with self.assertRaises(KeyError):
+        with self.assertRaises((KeyError, automat.NoTransition)):
             self.sockJSMachine.connect(self.sockJSWireProtocol)
 
     def test_connect(self):
