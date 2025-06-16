@@ -17,10 +17,11 @@ from autobahn.twisted.websocket import (WrappingWebSocketServerFactory,
                                         WrappingWebSocketServerProtocol)
 from automat import MethodicalMachine
 
+from constantly import Values, ValueConstant
+
 import eliot
 
 from twisted.internet import defer
-from twisted.python.constants import Values, ValueConstant
 from twisted.internet import reactor, protocol, error
 from twisted.python import failure
 from twisted.protocols.policies import ProtocolWrapper, WrappingFactory
